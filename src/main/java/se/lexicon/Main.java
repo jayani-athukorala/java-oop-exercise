@@ -23,5 +23,17 @@ public class Main {
         IO.println(account1);
         IO.println(account2);
         IO.println("AccountHolder: "+account3.getAccountHolder()+", Balance: "+account3.getBalance());
+
+        IO.println("========== Exercise 2 ===========");
+        Customer customer1 = new Customer(111101, "Jayani Athukorala", "jayani@email.com");
+        Customer customer2 = new Customer(111102, "Kristy Heijenk", "kristy@email.com");
+        Customer customer3 = new Customer(111103, "Fadi Alaraj", "fadi@email.com");
+
+        customer2.setEmail("kristy.new@email.com");
+
+        IO.println(customer1);
+        IO.println(customer2);
+        IO.println("Customer{id=" + customer3.getCustomerId() + ", name='" + customer3.getName() + "', email='" + customer3.getEmail() + "'}");
+
     }
 }
