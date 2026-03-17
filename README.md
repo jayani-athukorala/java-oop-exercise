@@ -20,25 +20,24 @@ You can find the exercise description here:
 
 ## 🧱 UML Class Diagrams
 
-### Exercise 1
-```
-+----------------------------------+
-|          BankAccount             |
-+----------------------------------+
-| - accountHolder: String          |
-| - balance: double                |
-+----------------------------------+
-| + BankAccount(String, double)    |
-| + getAccountHolder(): String     |
-| + setAccountHolder(String): void |
-| + getBalance(): double           |
-| + deposit(double): void          |
-| + withdraw(double): void         |
-| + toString(): String             |
-+----------------------------------+
+### Exercise 1 : 'BankAccount' Class UML
+
+```mermaid
+classDiagram
+    class Customer {
+        - accountHolder: String
+        - balance: double 
+        + BankAccount(String, double)
+        + getAccountHolder(): String
+        + setAccountHolder(String): void
+        + getBalance(): double
+        + deposit(double): void
+        + withdraw(double): void 
+        + toString(): String 
+    }
 ```
 
-### Customer class UML
+### Exercise 2 : 'Customer' class UML
 
 ```mermaid
 classDiagram
@@ -54,7 +53,90 @@ classDiagram
         +setEmail(String)
         +toString() String
     }
-````
+```
+
+### Exercise 3 : 'Student' class UML
+
+```mermaid
+classDiagram
+    class Student {
+        -int studentId
+        -String name
+        -int age
+        -String major
+        +Student(int, String, int, String)
+        +getStudentId() int
+        +getName() String
+        +getAge() int
+        +getMajor() String
+        +setName(String) void
+        +setAge(int) void
+        +setMajor(String) void
+        +toString() String
+    }
+```
+
+### Exercise 4 : 'Product' class UML
+
+```mermaid
+classDiagram
+    class Product {
+        -int productId
+        -String name
+        -String category
+        -double price
+        -int stock
+        +Product(int, String, String, double, int)
+        +getProductId() int
+        +getName() String
+        +getCategory() String
+        +getPrice() double
+        +getStock() int
+        +setName(String) void
+        +setCategory(String) void
+        +setPrice(double) void
+        +setStock(int) void
+        +increaseStock(int) void
+        +reduceStock(int) void
+        +toString() String
+    }
+```
+
+### Exercise 5 : 'Order' class UML
+
+```mermaid
+classDiagram
+    class Customer {
+        -int customerId
+        -String name
+        -String email
+    }
+
+    class Order {
+        -int orderId
+        -Customer customer
+        -List~Product~ products
+        -LocalDate orderDate
+        -double totalAmount
+        -String status
+        +addProduct(Product)
+        +removeProduct(Product)
+        +calculateTotal()
+    }
+
+    class Product {
+        -int productId
+        -String name
+        -String category
+        -double price
+        -int stock
+    }
+
+    %% Relationships
+    Customer "1" --> "0..*" Order : places
+    Order "1" --> "0..*" Product : contains
+```
+
 ---
 ## ⚡ Expected Output :
 
