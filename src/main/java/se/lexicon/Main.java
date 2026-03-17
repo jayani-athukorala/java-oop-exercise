@@ -1,17 +1,27 @@
 package se.lexicon;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        IO.println("========== Exercise 1 ===========");
+        //Create multiple BankAccount objects with different values.
+        BankAccount account1 = new BankAccount("Jayani Athukorala", 10000.00);
+        account1.setAccountHolder("T A J S Athukorala");
+        account1.withdraw(500);
+        account1.deposit(1200);
+
+        BankAccount account2 = new BankAccount("Kristy Heijenk", 15000.00);
+        account2.withdraw(250);
+        account2.withdraw(200);
+        account2.deposit(5000);
+
+        BankAccount account3 = new BankAccount("Fadi Alaraj", 25000.00);
+        account3.deposit(2500);
+        account3.deposit(2000);
+        account3.withdraw(3000);
+
+        IO.println(account1);
+        IO.println(account2);
+        IO.println("AccountHolder: "+account3.getAccountHolder()+", Balance: "+account3.getBalance());
     }
 }
