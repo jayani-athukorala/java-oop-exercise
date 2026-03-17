@@ -25,15 +25,15 @@ You can find the exercise description here:
 ```mermaid
 classDiagram
     class Customer {
-        - accountHolder: String
-        - balance: double 
+        - String accountHolder
+        - double balance  
         + BankAccount(String, double)
-        + getAccountHolder(): String
-        + setAccountHolder(String): void
-        + getBalance(): double
-        + deposit(double): void
-        + withdraw(double): void 
-        + toString(): String 
+        + getAccountHolder() String
+        + setAccountHolder(String) void
+        + getBalance() double
+        + deposit(double) void
+        + withdraw(double) void 
+        + toString() String 
     }
 ```
 
