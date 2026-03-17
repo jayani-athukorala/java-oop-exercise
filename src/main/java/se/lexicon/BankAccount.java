@@ -1,7 +1,7 @@
 package se.lexicon;
 
 public class BankAccount {
-    private String accountHolder;
+    private final String accountHolder;
     private double balance;
 
     public BankAccount(String accountHolder, double initialBalance) {
@@ -11,12 +11,6 @@ public class BankAccount {
 
     public String getAccountHolder() {
         return accountHolder;
-    }
-
-    public void setAccountHolder(String accountHolder) {
-        if (accountHolder != null && !accountHolder.isBlank()) {
-            this.accountHolder = accountHolder;
-        }
     }
 
     public double getBalance() {
@@ -37,6 +31,9 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "AccountHolder: " + accountHolder + ", Balance: " + balance;
+        return "BankAccount{" +
+                "accountHolder='" + accountHolder + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
