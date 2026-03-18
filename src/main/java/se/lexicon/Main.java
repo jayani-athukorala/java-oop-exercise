@@ -35,7 +35,7 @@ public class Main {
 
         IO.println(customer1);
         IO.println(customer2);
-        IO.println("Customer{id=" + customer3.getCustomerId() + ", name='" + customer3.getName() + "', email='" + customer3.getEmail() + "'}");
+        IO.println("Customer{customerId=" + customer3.getCustomerId() + ", name='" + customer3.getName() + "', email='" + customer3.getEmail() + "'}");
 
         IO.println("========== Exercise 3 ===========");
         Student student1 = new Student(101, "Sakuni Satharasinghe", 20, "Computer Science");
@@ -75,9 +75,7 @@ public class Main {
         // Order 1 for Jayani
         Order order1 = new Order(1001, customer1, LocalDate.now(), "Delivered");
         order1.addProduct(hc1);
-        hc1.setStock(hc1.getStock()-1);//Reduce hc1 stock
         order1.addProduct(sc1);
-        sc1.setStock(sc1.getStock()-1);//Reduce sc1 stock
 
         // Order 2 for Kristy
         Order order2 = new Order(1002, customer2, LocalDate.now(), "Pending");

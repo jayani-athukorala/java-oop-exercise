@@ -110,18 +110,40 @@ classDiagram
         -int customerId
         -String name
         -String email
+        +Customer(int, String, String)
+        +getCustomerId() int
+        +getName() String
+        +getEmail() String
+        +setName(String)
+        +setEmail(String)
+        +toString() String
     }
 
     class Order {
-        -int orderId
-        -Customer customer
-        -List~Product~ products
-        -LocalDate orderDate
-        -double totalAmount
-        -String status
-        +addProduct(Product)
-        +removeProduct(Product)
-        +calculateTotal()
+      - int orderId
+      - Customer customer
+      - List~Product~ products
+      - LocalDate orderDate
+      - double totalAmount
+      - String status
+    
+      + Order(int orderId, Customer customer, LocalDate orderDate, String status)
+      + int getOrderId()
+      + Customer getCustomer()
+      + List~Product~ getProducts()
+      + LocalDate getOrderDate()
+      + double getTotalAmount()
+      + String getStatus()
+    
+      + void setCustomer(Customer customer)
+      + void setProducts(List~Product~ products)
+      + void setOrderDate(LocalDate orderDate)
+      + void setTotalAmount(double totalAmount)
+      + void setStatus(String status)
+          
+      + void addProduct(Product product)
+      + void removeProduct(Product product)
+      + void calculateTotal()
     }
 
     class Product {
@@ -130,6 +152,19 @@ classDiagram
         -String category
         -double price
         -int stock
+        +Product(int, String, String, double, int)
+        +getProductId() int
+        +getName() String
+        +getCategory() String
+        +getPrice() double
+        +getStock() int
+        +setName(String) void
+        +setCategory(String) void
+        +setPrice(double) void
+        +setStock(int) void
+        +increaseStock(int) void
+        +reduceStock(int) void
+        +toString() String
     }
 
     %% Relationships
