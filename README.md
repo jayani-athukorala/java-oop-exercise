@@ -27,13 +27,9 @@ classDiagram
     class Customer {
         - accountHolder : String
         - balance : double
-        + BankAccount(String, double)
-        + getAccountHolder() String
-        + setAccountHolder(String) void
-        + getBalance() double
-        + deposit(double) void
-        + withdraw(double) void 
-        + toString() String 
+        + Customer(name : String, initialBalance : double)
+        + deposit(amount : double) void
+        + withdraw(amount : double) void
     }
 ```
 
@@ -45,13 +41,6 @@ classDiagram
         -customerId : int 
         -name : String
         -email : String
-        +Customer(int, String, String)
-        +getCustomerId() int
-        +getName() String
-        +getEmail() String
-        +setName(String)
-        +setEmail(String)
-        +toString() String
     }
 ```
 
@@ -64,15 +53,6 @@ classDiagram
         -name : String
         -age : int
         -major : String
-        +Student(int, String, int, String)
-        +getStudentId() int
-        +getName() String
-        +getAge() int
-        +getMajor() String
-        +setName(String) void
-        +setAge(int) void
-        +setMajor(String) void
-        +toString() String
     }
 ```
 
@@ -86,19 +66,8 @@ classDiagram
         -category : String
         -price : double
         -stock : int
-        +Product(int, String, String, double, int)
-        +getProductId() int
-        +getName() String
-        +getCategory() String
-        +getPrice() double
-        +getStock() int
-        +setName(String) void
-        +setCategory(String) void
-        +setPrice(double) void
-        +setStock(int) void
         +increaseStock(int) void
         +reduceStock(int) void
-        +toString() String
     }
 ```
 
@@ -110,13 +79,6 @@ classDiagram
         -customerId : int
         -name : String
         -email : String
-        +Customer(int, String, String)
-        +getCustomerId() int
-        +getName() String
-        +getEmail() String
-        +setName(String)
-        +setEmail(String)
-        +toString() String
     }
 
     class Order {
@@ -127,20 +89,7 @@ classDiagram
       - totalAmount : double
       - status : String
     
-      + Order(int orderId, Customer customer, LocalDate orderDate, String status)
-      + getOrderId() int
-      + getCustomer() Customer
-      + getProducts() List~Product~
-      + getOrderDate() LocalDate
-      + getTotalAmount() double
-      + getStatus() String
-    
-      + setCustomer(Customer customer) void
-      + setProducts(List~Product~ products) void
-      + setOrderDate(LocalDate orderDate) void
-      + setTotalAmount(double totalAmount) void
-      + setStatus(String status) void
-          
+      + Order(int orderId, Customer customer, LocalDate orderDate, String status)    
       + addProduct(Product product) void
       + removeProduct(Product product) void
       + calculateTotal() void
@@ -152,19 +101,8 @@ classDiagram
         -category : String
         -price : double
         -int stock
-        +Product(int, String, String, double, int)
-        +getProductId() int
-        +getName() String
-        +getCategory() String
-        +getPrice() double
-        +getStock() int
-        +setName(String) void
-        +setCategory(String) void
-        +setPrice(double) void
-        +setStock(int) void
         +increaseStock(int) void
         +reduceStock(int) void
-        +toString() String
     }
 
     %% Relationships
