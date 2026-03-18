@@ -60,7 +60,7 @@ public class Main {
         Product sc3 = new Product(203, "Sunscreen", "SkinCare", 229.49, 45);
 
         // Each object maintains its own state
-        hc1.setStock(45); // update stock of Shampoo
+        hc1.increaseStock(10); // update stock of Shampoo
         sc2.setPrice(7.99); // discount Face Wash
 
         // Print all products

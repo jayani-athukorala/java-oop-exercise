@@ -24,13 +24,14 @@ You can find the exercise description here:
 
 ```mermaid
 classDiagram
-    class Customer {
+    class BankAccount {
         - accountHolder : String
         - balance : double
-        + Customer(name : String, initialBalance : double)
+        + BankAccount(name : String, initialBalance : double)
         + deposit(amount : double) void
         + withdraw(amount : double) void
     }
+    note for BankAccount "Includes getters only. \naccountHolder and balance are read-only."
 ```
 
 ### Exercise 2 : 'Customer' class UML
@@ -41,7 +42,8 @@ classDiagram
         -customerId : int 
         -name : String
         -email : String
-    }
+    }    
+    note for Customer "Getters/setters included. \ncustomerId is read-only."
 ```
 
 ### Exercise 3 : 'Student' class UML
@@ -54,6 +56,7 @@ classDiagram
         -age : int
         -major : String
     }
+    note for Student "Getters/setters included. \nstudentId is read-only."
 ```
 
 ### Exercise 4 : 'Product' class UML
@@ -69,6 +72,7 @@ classDiagram
         +increaseStock(int) void
         +reduceStock(int) void
     }
+    note for Product "Getters/setters included. \nproductId is read-only."
 ```
 
 ### Exercise 5 : 'Order' class UML
@@ -80,7 +84,8 @@ classDiagram
         -name : String
         -email : String
     }
-
+    note for Customer "Getters/setters included. \ncustomerId is read-only."
+    
     class Order {
       - orderId : int
       - customer : Customer
@@ -94,16 +99,18 @@ classDiagram
       + removeProduct(Product product) void
       + calculateTotal() void
     }
-
+    note for Order "Getters/setters included. \norderId, products and totalAmount are read-only."
+    
     class Product {
         -productId : int
         -name : String
         -category : String
         -price : double
-        -int stock
+        -stock : int
         +increaseStock(int) void
         +reduceStock(int) void
     }
+    note for Product "Getters/setters included. \nproductId and stock are read-only."
 
     %% Relationships
     Customer "1" --> "0..*" Order : places

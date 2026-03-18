@@ -50,16 +50,8 @@ public class Order {
         this.customer = customer;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
     public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
     }
 
     public void setStatus(String status) {

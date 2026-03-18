@@ -7,12 +7,12 @@ public class Product {
     private double price;
     private int stock;
 
-    public Product(int productId, String name, String category, double price, int stock) {
+    public Product(int productId, String name, String category, double price, int initialStock) {
         this.productId = productId;
         setName(name);
         setCategory(category);
         setPrice(price);
-        setStock(stock);
+        this.stock = Math.max(initialStock, 0);
     }
 
     public int getProductId() {
@@ -51,12 +51,6 @@ public class Product {
 
     public int getStock() {
         return stock;
-    }
-
-    public void setStock(int stock) {
-        if(stock >= 0) {
-            this.stock = stock;
-        }
     }
 
     public boolean reduceStock(int quantity) {
