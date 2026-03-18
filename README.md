@@ -25,8 +25,8 @@ You can find the exercise description here:
 ```mermaid
 classDiagram
     class Customer {
-        - accountHolder String
-        - balance double
+        - String accountHolder
+        - double balance  
         + BankAccount(String, double)
         + getAccountHolder() String
         + setAccountHolder(String) void
@@ -42,9 +42,9 @@ classDiagram
 ```mermaid
 classDiagram
     class Customer {
-        -customerId int
-        -name String
-        -email String
+        -int customerId
+        -String name
+        -String email
         +Customer(int, String, String)
         +getCustomerId() int
         +getName() String
@@ -60,10 +60,10 @@ classDiagram
 ```mermaid
 classDiagram
     class Student {
-        -studentId int
-        -name String
-        -age int
-        -major String
+        -int studentId
+        -String name
+        -int age
+        -String major
         +Student(int, String, int, String)
         +getStudentId() int
         +getName() String
@@ -81,11 +81,11 @@ classDiagram
 ```mermaid
 classDiagram
     class Product {
-        -productId int
-        -name String
-        -category String
-        -price double
-        -stock int
+        -int productId
+        -String name
+        -String category
+        -double price
+        -int stock
         +Product(int, String, String, double, int)
         +getProductId() int
         +getName() String
@@ -107,9 +107,9 @@ classDiagram
 ```mermaid
 classDiagram
     class Customer {
-        -customerId int
-        -name String
-        -email String
+        -int customerId
+        -String name
+        -String email
         +Customer(int, String, String)
         +getCustomerId() int
         +getName() String
@@ -120,12 +120,12 @@ classDiagram
     }
 
     class Order {
-      - orderId int
-      - customer Customer
-      - products List~Product~
-      - orderDate LocalDate
-      - totalAmount double
-      - status String
+      - int orderId
+      - Customer customer
+      - List~Product~ products
+      - LocalDate orderDate
+      - double totalAmount
+      - String status
     
       + Order(int orderId, Customer customer, LocalDate orderDate, String status)
       + getOrderId() int
@@ -147,11 +147,11 @@ classDiagram
     }
 
     class Product {
-        -productId int
-        -name String
-        -category String
-        -price double
-        -stock int
+        -int productId
+        -String name
+        -String category
+        -double price
+        -int stock
         +Product(int, String, String, double, int)
         +getProductId() int
         +getName() String
