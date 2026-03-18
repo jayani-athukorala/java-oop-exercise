@@ -26,18 +26,18 @@ public class Main {
         IO.println(account2);
         IO.println("AccountHolder: "+account3.getAccountHolder()+", Balance: "+account3.getBalance());
 
-        IO.println("========== Exercise 2 ===========");
+        IO.println("\n========== Exercise 2 ===========");
         Customer customer1 = new Customer(111101, "Jayani Athukorala", "jayani@email.com");
         Customer customer2 = new Customer(111102, "Kristy Heijenk", "kristy@email.com");
         Customer customer3 = new Customer(111103, "Fadi Alaraj", "fadi@email.com");
 
         customer2.setEmail("kristy.new@email.com");
 
-        IO.println(customer1);
-        IO.println(customer2);
+        IO.print(customer1);
+        IO.print(customer2);
         IO.println("Customer{customerId=" + customer3.getCustomerId() + ", name='" + customer3.getName() + "', email='" + customer3.getEmail() + "'}");
 
-        IO.println("========== Exercise 3 ===========");
+        IO.println("\n========== Exercise 3 ===========");
         Student student1 = new Student(101, "Sakuni Satharasinghe", 20, "Computer Science");
         Student student2 = new Student(102, "Mazood Imitiyaz", 22, "Mathematics");
         Student student3 = new Student(102, "Kalhara Nipunsara", 22, "Computer Networking");
@@ -46,9 +46,9 @@ public class Main {
 
         IO.println(student1);
         IO.println(student2);
-        IO.println("Student{id=" + student3.getStudentId() + ", name='" + student3.getName() + "', age=" + student3.getAge() + ", major='" + student3.getMajor() + "'}");
+        IO.println("Student{studentId=" + student3.getStudentId() + ", name='" + student3.getName() + "', age=" + student3.getAge() + ", major='" + student3.getMajor() + "'}");
 
-        IO.println("========== Exercise 4 ===========");
+        IO.println("\n========== Exercise 4 ===========");
         // Hair care products
         Product hc1 = new Product(101, "Shampoo", "HairCare", 199.99, 50);
         Product hc2 = new Product(102, "Conditioner", "HairCare", 190.49, 40);
@@ -64,14 +64,14 @@ public class Main {
         sc2.setPrice(7.99); // discount Face Wash
 
         // Print all products
-        IO.println(hc1);
-        IO.println(hc2);
-        IO.println(hc3);
-        IO.println(sc1);
-        IO.println(sc2);
-        IO.println(sc3);
+        IO.print(hc1);
+        IO.print(hc2);
+        IO.print(hc3);
+        IO.print(sc1);
+        IO.print(sc2);
+        IO.print(sc3);
 
-        IO.println("========== Exercise 5 ===========");
+        IO.println("\n========== Exercise 5 ===========");
         // Order 1 for Jayani
         Order order1 = new Order(1001, customer1, LocalDate.now(), "Delivered");
         order1.addProduct(hc1);

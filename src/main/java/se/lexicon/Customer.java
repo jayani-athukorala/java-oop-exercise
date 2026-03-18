@@ -41,6 +41,6 @@ public class Customer {
                 "customerId=" + customerId +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                '}';
+                "}\n";
     }
 }

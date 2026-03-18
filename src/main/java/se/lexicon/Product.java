@@ -81,6 +81,6 @@ public class Product {
                 ", category='" + category + '\'' +
                 ", price=" + price +
                 ", stock=" + stock +
-                '}';
+                "}\n";
     }
 }
