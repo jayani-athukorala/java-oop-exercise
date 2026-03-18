@@ -128,22 +128,22 @@ classDiagram
       - String status
     
       + Order(int orderId, Customer customer, LocalDate orderDate, String status)
-      + int getOrderId()
-      + Customer getCustomer()
-      + List~Product~ getProducts()
-      + LocalDate getOrderDate()
-      + double getTotalAmount()
-      + String getStatus()
+      + getOrderId() int
+      + getCustomer() Customer
+      + getProducts() List~Product~
+      + getOrderDate() LocalDate
+      + getTotalAmount() double
+      + getStatus() String
     
-      + void setCustomer(Customer customer)
-      + void setProducts(List~Product~ products)
-      + void setOrderDate(LocalDate orderDate)
-      + void setTotalAmount(double totalAmount)
-      + void setStatus(String status)
+      + setCustomer(Customer customer) void
+      + setProducts(List~Product~ products) void
+      + setOrderDate(LocalDate orderDate) void
+      + setTotalAmount(double totalAmount) void
+      + setStatus(String status) void
           
-      + void addProduct(Product product)
-      + void removeProduct(Product product)
-      + void calculateTotal()
+      + addProduct(Product product) void
+      + removeProduct(Product product) void
+      + calculateTotal() void
     }
 
     class Product {
